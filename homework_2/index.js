@@ -24,15 +24,13 @@ function saveViews(views) {
     }
 }
 
-
-// Загружаем счетчики при старте сервера
 let views = loadViews();
 
 // app.use(express.static('static'));
 
 app.get('/', (req, res) => {
-    views.index += 1; // Увеличиваем счетчик просмотров для главной страницы
-    saveViews(views); // Сохраняем обновленный счетчик
+    views.index += 1; 
+    saveViews(views); 
     console.log(`Счетчик главной страницы: ${views.index}`);
     res.send(`
          <h1>Приветствую на главной странице сайта</h1>
@@ -44,11 +42,11 @@ app.get('/', (req, res) => {
 });
 
 app.get('/abuot', (req, res) => {
-    views.about += 1; // Увеличиваем счетчик просмотров для страницы "О нас"
-    saveViews(views); // Сохраняем обновленный счетчик
+    views.about += 1; 
+    saveViews(views); 
     console.log(`Счетчик страницы "О нас": ${views.about}`);
    res.send(`
-     <h1>Приветствую странице обомне</h1>
+     <h1>Приветствую на странице обо мне</h1>
     <p>Количество просмотров этой страницы: ${views.about}</p>
     <a href="/">Главная</a>
     <a href="/abuot">Обо мне</a>
