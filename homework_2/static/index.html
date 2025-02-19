@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Главная страница сайта</title>
+</head>
+<body>
+    <h1>Приветствую на главной странице сайта</h1>
+    <p>Количество просмотров этой страницы: <span id="index-view-count">0</span></p>
+    <a href="/">Главная</a>
+    <a href="/abuot">Обо мне</a>
+    <script>
+        // Получаем количество просмотров для главной страницы
+        fetch('/views')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('index-view-count').textContent = data.index;
+            });
+    </script>
+</body>
+</html>
