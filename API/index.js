@@ -85,6 +85,7 @@ app.put('/users/:id', (req, res) => {
         user.secondName = secondName;
         user.age = age;
         user.city = city;
+        writeUsersToFile(users);
         res.send({user});
     } else {
         res.status(404);

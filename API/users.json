@@ -1,9 +1,16 @@
 [
   {
-    "id": 1,
-    "firstName": "Dima",
+    "id": 2,
+    "firstName": "Yasha",
     "secondName": "Vasiliev",
-    "age": 35,
+    "age": 32,
+    "city": "Moscow"
+  },
+  {
+    "id": 3,
+    "firstName": "Petr",
+    "secondName": "Ivanov",
+    "age": 15,
     "city": "Shelkovo"
   }
 ]
